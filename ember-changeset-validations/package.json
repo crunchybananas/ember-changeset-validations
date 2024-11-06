@@ -35,29 +35,29 @@
     "test": "echo 'A v2 addon does not have tests, run tests in test-app'"
   },
   "dependencies": {
-    "@embroider/addon-shim": "^1.8.9",
-    "decorator-transforms": "^2.0.0",
-    "ember-get-config": "^0.3.0 || ^0.4.0 || ^0.5.0 || ^1.0.2 || ^2.0.0",
+    "@embroider/addon-shim": "^1.9.0",
+    "decorator-transforms": "^2.2.4",
+    "ember-get-config": "^2.1.1",
     "ember-validators": "~4.1.2",
-    "validated-changeset": "~1.3.2"
+    "validated-changeset": "~1.3.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.2",
-    "@babel/eslint-parser": "^7.25.1",
-    "@babel/runtime": "^7.25.0",
-    "@embroider/addon-dev": "^5.0.0",
+    "@babel/core": "^7.26.0",
+    "@babel/eslint-parser": "^7.25.9",
+    "@babel/runtime": "^7.26.0",
+    "@embroider/addon-dev": "^6.0.1",
     "@rollup/plugin-babel": "^6.0.4",
-    "babel-plugin-ember-template-compilation": "^2.2.5",
+    "babel-plugin-ember-template-compilation": "^2.3.0",
     "concurrently": "^8.2.2",
     "ember-template-lint": "^6.0.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.14.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-ember": "^12.1.1",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-n": "^17.10.2",
+    "eslint-plugin-ember": "^12.3.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-n": "^17.12.0",
     "eslint-plugin-prettier": "^5.2.1",
     "prettier": "^3.3.3",
-    "rollup": "^4.20.0",
+    "rollup": "^4.24.4",
     "rollup-plugin-copy": "^3.5.0"
   },
   "volta": {
@@ -68,7 +68,25 @@
     "edition": "octane"
   },
   "ember-addon": {
-    "app-js": {},
+    "app-js": {
+      "./index.js": "./dist/_app_/index.js",
+      "./utils/get-messages.js": "./dist/_app_/utils/get-messages.js",
+      "./utils/handle-multiple-validations.js": "./dist/_app_/utils/handle-multiple-validations.js",
+      "./utils/messages.js": "./dist/_app_/utils/messages.js",
+      "./utils/to-date.js": "./dist/_app_/utils/to-date.js",
+      "./utils/validation-errors.js": "./dist/_app_/utils/validation-errors.js",
+      "./utils/with-defaults.js": "./dist/_app_/utils/with-defaults.js",
+      "./utils/wrap.js": "./dist/_app_/utils/wrap.js",
+      "./validators/confirmation.js": "./dist/_app_/validators/confirmation.js",
+      "./validators/date.js": "./dist/_app_/validators/date.js",
+      "./validators/exclusion.js": "./dist/_app_/validators/exclusion.js",
+      "./validators/format.js": "./dist/_app_/validators/format.js",
+      "./validators/inclusion.js": "./dist/_app_/validators/inclusion.js",
+      "./validators/index.js": "./dist/_app_/validators/index.js",
+      "./validators/length.js": "./dist/_app_/validators/length.js",
+      "./validators/number.js": "./dist/_app_/validators/number.js",
+      "./validators/presence.js": "./dist/_app_/validators/presence.js"
+    },
     "main": "addon-main.cjs",
     "type": "addon",
     "version": 2

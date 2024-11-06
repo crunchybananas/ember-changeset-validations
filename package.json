@@ -13,7 +13,7 @@
     "start": "concurrently 'pnpm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
     "start:addon": "pnpm --filter ember-changeset-validations start",
     "start:test-app": "pnpm --filter test-app start",
-    "test": "pnpm --filter '*' test"
+    "test": "pnpm --filter 'test-app' test"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
