@@ -16,9 +16,9 @@ module('Unit | Utility | get messages', function () {
   });
 
   test('it fallsback to default messages if not defined', function (assert) {
-    let dummyModuleMap = {};
+    let test-appModuleMap = {};
     assert.deepEqual(
-      getMessages(dummyModuleMap, false),
+      getMessages(test-appModuleMap, false),
       defaultMessages,
       'loads the correct module',
     );
